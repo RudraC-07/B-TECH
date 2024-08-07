@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+}
+.logo{
+    float: left;
+    margin-right: 200px;
+    margin-left: 100px;
+}
+a{
+    float: left;
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+}
+input{
+    margin-left: 250PX;
+    margin-top: 8px;
+}
+.head{
+    background-image: url("8a.jpg");
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.a{
+    float: left;
+    margin-left: 400px;
+}
+.b{
+    float: left;
+}
+.c{
+    float: left;
+}
+.d{
+    float: left;
+}
+.e{
+    float: left;
+}
+.mid{
+    float: left;
+}

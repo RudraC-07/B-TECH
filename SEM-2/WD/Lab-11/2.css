@@ -1,0 +1,8 @@
+*{
+    box-sizing: border-box;
+}
+.grd{
+    height: 560px;
+    width: 1265px;
+    background-image: radial-gradient(red,yellow,green);
+}

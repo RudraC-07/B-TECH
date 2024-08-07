@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse event</title>
+  </head>
+  <body>
+    <h1 id="displaay"></h1>
+    <script>
+      let s = document.getElementById("displaay");
+      document.addEventListener("click", () => display("click"));
+      document.addEventListener("dblclick", () => display("double click"));
+      document.addEventListener("mouseout", () => display("mouse out"));
+      document.addEventListener("mousemove", () => display("mouse move"));
+
+      function display(str) {
+        s.innerText = str;
+      }
+    </script>
+  </body>
+</html>

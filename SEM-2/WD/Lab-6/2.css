@@ -1,0 +1,60 @@
+*{
+    box-sizing: border-box;    
+}
+.d1{
+    float: right;
+}
+.d  {
+    float: left;
+}
+.h{
+    height: 102px;
+}
+a{
+    margin :7px;
+    text-decoration: none;
+}
+.s{
+    background-color: firebrick;
+    height: 40px;
+    width: 200px;
+    text-align: center;
+}
+.s1{
+    background-color: firebrick;
+    height: 60px;
+    width: 200px;
+     text-align: center;
+}
+.blocks{
+    float: left;
+    height: 100px;
+}
+.images{
+   
+    float: left;
+}
+.row1{
+    float: left;
+    margin-left: 20px;
+    
+    margin-right: 20px;
+}
+
+.row2{
+    margin-top: 30px;
+    float:  left;
+    margin-left: 20px;  
+    
+}
+.bottom{
+    height: 50px;
+    width: 100%;
+    background-color: blue;
+    float: left;
+    color: white;
+}
+.mid{
+    width: 100%;
+    height: 20px;
+}

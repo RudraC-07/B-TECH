@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+</head>
+<body>
+    <script>
+        a=prompt("Enter a Number:");
+        alert(`Factorial Of ${a} = ${getFactorial(a)}`);
+
+        function getFactorial(a) {
+            temp=1;
+            for(i=1;i<=a;i++){
+                temp*=i;
+            }
+            return temp;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number</title>
+</head>
+<body>
+    <script>
+        a=prompt("Enter a Number:");
+        isPrime(a);
+
+        function isPrime(a) {
+            for(i=2;i<=(a/2);i++){
+                if(a%i==0){
+                    alert(`${a} is Not a Prime Number`);
+                    return;
+                }
+            }
+            alert(`${a} is a Prime Number`)
+        }
+    </script>
+</body>
+</html>

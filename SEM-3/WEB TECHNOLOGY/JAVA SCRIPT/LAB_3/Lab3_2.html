@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array ascending order</title>
+  </head>
+  <body>
+    <script>
+      a = parseInt(prompt("Enter size of array : "));
+      b = [];
+
+      for (i = 0; i < a; i++) {
+        b[i] = parseInt(prompt("Enter elements : "));
+        document.write("Before ascending : b[" + i + "] = " + b[i] + "<br>");
+      }
+
+      for (i = 0; i < a - 1; i++) {
+        for (j = i + 1; j < a; j++) {
+          if (b[i] > b[j]) {
+            let temp = b[i];
+            b[i] = b[j];
+            b[j] = temp;
+          }
+        }
+        // if (minindex != i) {
+        //   a[minindex] = a[i];
+        //   a[i] = min;
+        // }
+      }
+
+      for (i = 0; i < a; i++) {
+        document.write("After ascending : b[" + i + "] = " + b[i] + "<br>");
+      }
+    </script>
+  </body>
+</html>

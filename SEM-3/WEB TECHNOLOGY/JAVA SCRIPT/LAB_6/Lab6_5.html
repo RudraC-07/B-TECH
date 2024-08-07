@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>change properties</title>
+  </head>
+  <body>
+    <input type="text" id="name" />
+    <button onclick="changeproperty()">
+      Click to change property date/text
+    </button>
+    <script>
+      let s = document.getElementById("name");
+      let type = true;
+      function changeproperty() {
+        if (type) {
+          s.type = "date";
+        } else {
+          s.type = "text";
+        }
+        type = !type;
+      }
+    </script>
+  </body>
+</html>

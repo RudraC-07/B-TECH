@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GCD</title>
+  </head>
+  <body>
+    <script>
+      a = prompt("Enter 1st number.");
+      b = prompt("Enter 2nd number.");
+
+      if (a < b) {
+        min = a;
+      } else {
+        min = b;
+      }
+
+      for (i = min; i >= 1; i--) {
+        if (a % i == 0 && b % i == 0) {
+          document.write("GCD of " + a + " and " + b + " =" + i);
+          break;
+        }
+      }
+    </script>
+  </body>
+</html>

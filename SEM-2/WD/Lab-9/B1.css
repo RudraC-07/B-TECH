@@ -1,0 +1,14 @@
+div{
+    background-color: aqua;
+    height: 25px;
+    width: 100px;
+    animation-name: myself;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    position: relative;
+}
+@keyframes myself{
+    from{left: 0px;}
+    to{left: 970px;}
+}

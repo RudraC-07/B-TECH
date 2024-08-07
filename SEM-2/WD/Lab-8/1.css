@@ -1,0 +1,82 @@
+*{
+    box-sizing: border-box;
+  }
+  .top{
+  height: 130px;
+  width: 100%;
+  }
+  .logo{
+      margin-top: 10px;
+      margin-left: 5px;
+      float: left;
+  }
+  .image{
+      left: 50px;
+  }
+  .links{
+      float: right;
+      text-decoration: none;
+      bottom: 35px;
+      margin-top: 50px;
+      margin-right: 50px;
+  }
+  .mid{
+      float: left;
+      height: 600px;
+      width: 100%;
+   
+  }
+  .bottom{
+      float: left;
+      width: 100%;
+      height: 290px;
+    
+  }
+  a:link {
+      text-decoration: none;
+      margin-right: 40px;
+      color: black;
+    }
+    .aa{
+      position: relative;
+      bottom: 550px;
+      left: 850px;
+    }
+    .bb{
+      position: relative;
+      bottom: 550px;
+      left: 850px;
+    }
+    .cointainer1{
+      margin-left: 50px;
+      margin-top: 27px;
+      width: 250px;
+      height: 200px;
+      border: 2px solid red;
+      float: left;
+    }
+    .cointainer2{
+      float: left;
+      margin-left: 50px;
+      margin-top: 27px;
+      width: 250px;
+      height: 200px;
+      border: 2px solid red;
+    }
+    .cointainer3{
+      float: left;
+      margin-left: 50px;
+      margin-top: 27px;
+      width: 250px;
+      height: 200px;
+      border: 2px solid red;
+    }
+    .cointainer4{
+      float: left;
+      margin-left: 50px;  
+      margin-top: 27px;
+      width: 250px;
+      height: 200px;
+      border: 2px solid red;
+     
+    }

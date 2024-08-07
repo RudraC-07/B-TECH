@@ -1,0 +1,51 @@
+#page{
+    background-color: aqua;
+    height: 320 px;
+    padding: 10px;
+}
+#header{
+    background-color: purple;
+    padding: 10px;
+    
+}
+#content{
+    background-color: yellow;
+    height: 300px;
+    padding: 10px;
+}
+#parta{
+    height: 40vh;
+    width: 60%;
+    float: left;
+}
+.entry{
+    background-color: black;
+    color: white;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+#footer{
+    background-color: blue;
+    color: white;
+}
+.sidebar{
+    height: 70px;
+    width: 36%;
+    float: left;
+    background-color: black;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: 40px;
+}
+
+@media(max-width: 500px){
+    #parta{
+        width: 100%;
+        float: none;
+    }
+    .sidebar{
+        width: 80%;
+        float: none;
+    }
+}

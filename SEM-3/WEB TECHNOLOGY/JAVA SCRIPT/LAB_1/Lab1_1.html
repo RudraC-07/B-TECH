@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <script>
+        a=prompt("Enter First Number:");
+        b=prompt("Enter Second Number:");
+        c=prompt("Enter Operation Sign(+,-,*,/):");
+
+        if(c=="+"){
+            alert(`Addition Of ${a} and ${b} = ${parseInt(a)+parseInt(b)}`);
+        }else if(c=="-"){
+            alert(`Substraction Of ${a} and ${b} = ${parseInt(a)-parseInt(b)}`);
+        }else if(c=="*"){
+            alert(`Multiplication Of ${a} and ${b} = ${parseInt(a)*parseInt(b)}`);
+        }else if(c=="/"){
+            if(b==0){
+                alert("Can't Divide By Zero");
+            }else{
+                alert(`Division Of ${a} and ${b} = ${parseInt(a)/parseInt(b)}`);
+            }
+        }else{
+            alert("Enter Valid Operation Sign");
+        }
+    </script>
+</body>
+</html>

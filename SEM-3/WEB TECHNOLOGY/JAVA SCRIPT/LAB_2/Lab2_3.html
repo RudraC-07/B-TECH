@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patterns</title>
+  </head>
+  <body>
+    <script>
+      for (i = 1; i <= 5; i++) {
+        for (j = 1; j <= i; j++) {
+          document.write("*");
+        }
+        document.write("<br>");
+      }
+      document.write("<br>");
+
+      for (a = 0; a < 5; a++) {
+        for (b = 4; b >= a; b--) {
+          document.write("&nbsp;&nbsp;");
+        }
+        for (c = 1; c <= a + 1; c++) {
+          document.write("*");
+        }
+        document.write("<br>");
+      }
+      document.write("<br>");
+
+      for (a = 0; a < 5; a++) {
+        for (b = 4; b >= a; b--) {
+          document.write("&nbsp;");
+        }
+        for (c = 1; c <= a + 1; c++) {
+          document.write("*");
+        }
+        document.write("<br>");
+      }
+    </script>
+  </body>
+</html>

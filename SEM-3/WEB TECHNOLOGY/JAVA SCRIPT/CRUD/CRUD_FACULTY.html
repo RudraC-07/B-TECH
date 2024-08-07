@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <label>name:</label>
+    <input type="text" value="" id="name">
+    <label>department:</label>
+    <input type="text" value="" id="department">
+    <label>position:</label>
+    <input type="text" value="" id="position">
+    <label>email:</label>
+    <input type="text" value="" id="email">
+    <label>phone:</label>
+    <input type="text" value="" id="phone">
+    <button id="btn" class="btn btn-primary" onclick="addFaculty()">add</button>
+
+    <!-- <div class="container mt-3">
+        <div class="row">
+            <div class="card col-4 me-2 p-0" style="width: 20rem;">
+                <img src="https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/6---28-04-2023-02-06-07.jpg"
+                    class="card-img-top">
+                <div class="card-body">
+                    <h2 class="card-title"><span id="name1"></span></h2>
+                </div>
+                <ul class="list-group list-group-flush" type="none">
+                    <li class="list-group-item"><span id="department1"></span></li>
+                    <li class="list-group-item"><span id="position1"></span></li>
+                    <li class="list-group-item"><span id="email1"></span></li>
+                    <li class="list-group-item"><span id="phoneno1"></span></li>
+                </ul>
+                <div class="card-body">
+                    <button type="button" class="btn btn-success">Create</button>
+                    <button type="button" class="btn btn-warning mx-3" onclick="update()">Update</button>
+                    <button type="button" class="btn btn-danger">Delete</button>
+                </div>
+            </div>   
+        </div>
+    </div> -->
+
+    <div id="result"></div>
+
+
+
+
+
+    <script>
+
+        idToEdit = -1;
+
+        const faculty = [
+            {
+                name: "Dr. John Smith",
+                department: "Computer Science",
+                position: "Professor",
+                email: "john.smith@university.edu",
+                phone: "123-456-7890"
+            },
+            {
+                name: "Dr. Emily Johnson",
+                department: "Mathematics",
+                position: "Associate Professor",
+                email: "emily.johnson@university.edu",
+                phone: "234-567-8901"
+            }
+        ]
+
+        result = document.getElementById('result');
+        function displayFaculty() {
+            temp=''
+
+            temp+='<div class="container mt-3">';
+            temp+='<div class ="row">';
+
+            for (i = 0; i < faculty.length; i++) {
+
+                temp+='<div class="card col-4 me-2 p-0" style="width: 20rem>'
+                temp+='<img src="https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/6---28-04-2023-02-06-07.jpg" class="card-img-top">';
+                temp+='<div class="card-body">';
+                temp+='<h2 class="card-title">' + faculty[i].name + '</h2>';
+                temp+='</div>';
+                temp+='<ul class="list-group list-group-flush" type="none"><li class="list-group-item">Department : ' + faculty[i].department + '</li><li class="list-group-item">Position : ' + faculty[i].position + '</li><li class="list-group-item">Email : ' + faculty[i].email + '</li><li class="list-group-item">Phone No. : ' + faculty[i].phone + '</li></ul>';
+                temp+='<div class="card-body">';
+                temp+='<button type="button" class="btn btn-success">Create</button>';
+                temp+='<button type="button" class="btn btn-warning mx-3" onclick="update(' + i + ')">Update</button>';
+                temp+='<button type="button" class="btn btn-danger" onclick="delete1('+ i +')">Delete</button>';
+                temp+='</div>';
+                temp+='</div>';
+            }
+            temp+='</div>';
+            temp+='</div>';
+            result.innerHTML=temp;
+            
+        }
+        //temp = "<h1>fdhf</h1>"
+
+        // function setStudent(id){
+        // 	idToEdit = id;
+        // 	document.getElementById('btn').innerHTML = "Edit"
+        // 	document.getElementById('txtName').value = students[id]
+        // }
+
+        function update(id) {
+            idToEdit = id;
+            document.getElementById('btn').innerHTML = "Edit"
+
+            document.getElementById('name').value = faculty[id].name;
+
+            department = document.getElementById('department');
+            department.value = faculty[id].department;
+
+            position = document.getElementById('position');
+            position.value = faculty[id].position;
+
+            email = document.getElementById('email');
+            email.value = faculty[id].email;
+
+            phone = document.getElementById('phone');
+            phone.value = faculty[id].phone;
+            //console.log(department);  
+            //displayFaculty();
+        }
+
+        function addFaculty() {
+            tempobj = {
+
+                name: document.getElementById('name').value,
+                department: document.getElementById('department').value,
+                position: document.getElementById('position').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+            }
+            console.log(tempobj);
+            if (idToEdit >= 0) {
+                faculty[idToEdit] = tempobj;
+                console.log(faculty);
+                idToEdit = -1;
+                document.getElementById('btn').innerHTML = "Add";
+
+            }
+            else {
+                faculty.push(tempobj);
+            }
+            document.getElementById('name').value = "";
+            document.getElementById('department').value = "";
+            document.getElementById('position').value = "";
+            document.getElementById('email').value = "";
+            document.getElementById('phone').value = "";
+            displayFaculty();
+        }
+
+        function delete1(id){
+           let a = confirm('are you sure to delete');
+            if(a){
+            faculty.splice(id,1);
+            }
+            displayFaculty();
+        }
+
+        displayFaculty();
+    </script>
+</body>
+
+</html>

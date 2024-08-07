@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prime number</title>
+  </head>
+  <body>
+    <script>
+      a = prompt("Enter starting range.");
+      b = prompt("Enter ending range.");
+      c = 0;
+      for (i = a; i < b; i++) {
+        c = 0;
+        for (j = 1; j <= i; j++) {
+          if (i % j == 0) {
+            c++;
+          }
+        }
+
+        if (c <= 2) {
+          document.write("Prime numbers = " + i + "<br>");
+        }
+      }
+    </script>
+  </body>
+</html>

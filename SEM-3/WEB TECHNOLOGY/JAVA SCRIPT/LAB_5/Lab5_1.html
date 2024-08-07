@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .container {
+        width: 25%;
+      }
+
+      #clr:hover {
+        background-color: red;
+      }
+
+      #c:hover {
+        background-color: red;
+      }
+
+      #equal:hover {
+        background-color: forestgreen;
+      }
+
+      #division:hover {
+        background-color: cornflowerblue;
+      }
+
+      #modulo:hover {
+        background-color: cornflowerblue;
+      }
+
+      #multiply:hover {
+        background-color: cornflowerblue;
+      }
+
+      #plus:hover {
+        background-color: cornflowerblue;
+      }
+
+      #minus:hover {
+        background-color: cornflowerblue;
+      }
+
+      .btn:hover {
+        background-color: tan;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container mt-3">
+      <form>
+        <div class="row pt-2">
+          <input
+            type="text"
+            id="answerPanel"
+            class="form-control shadow p-3 mb-4 bg-body-tertiary rounded"
+            autofocus
+          />
+        </div>
+
+        <div class="row mb-1">
+          <button
+            class="col-3 btn btn-dark rounded-3 border border-2"
+            type="button"
+            onclick="answerPanel.value = ''"
+            id="ac"
+          >
+            AC
+          </button>
+          <button
+            class="col-3 btn btn-dark rounded-3 border border-2"
+            type="button"
+            onclick="back()"
+            id="clr"
+          >
+            <i class="bi bi-backspace"></i>
+          </button>
+          <button
+            class="col-3 btn btn-dark rounded-3 border border-2"
+            type="button"
+            onclick="answerPanel.value += '%'"
+            id="modulo"
+          >
+            %
+          </button>
+          <button
+            class="col-3 btn btn-dark rounded-3 border border-2"
+            type="button"
+            onclick="answerPanel.value += '/'"
+            id="division"
+          >
+            /
+          </button>
+        </div>
+
+        <div class="row mb-1">
+          <button
+            class="col-3 btn btn-dark rounded-3 border border-2"
+            type="button"
+            onclick="answerPanel.value += '7'"
+          >
+            7
+          </button>
+          <button
+            class="col-3 btn btn-dark rounded-3 border border-2"
+            type="button"
+            onclick="answerPanel.value += '8'"
+          >
+            8
+          </button>
+          <button
+            class="col-3 btn btn-dark rounded-3 border border-2"
+            type="button"
+            onclick="answerPanel.value += '9'"
+          >
+            9
+          </button>
+          <button
+            class="col-3 btn btn-dark rounded-3 border border-2"
+            type="button"
+            onclick="answerPanel.value += '*'"
+            id="multiply"
+          >
+            *
+          </button>
+        </div>
+
+        <div class="row mb-1">
+          <button
+            class="col-3 btn btn-dark rounded-3 border border-2"
+            type="button"
+            onclick="answerPanel.value += '4'"
+          >
+            4
+          </button>
+          <button
+            class="col-3 btn btn-dark rounded-3 border border-2"
+            type="button"
+            onclick="answerPanel.value += '5'"
+          >
+            5
+          </button>
+          <button
+            class="col-3 btn btn-dark rounded-3 border border-2"
+            type="button"
+            onclick="answerPanel.value += '6'"
+          >
+            6
+          </button>
+          <button
+            class="col-3 btn btn-dark rounded-3 border border-2"
+            type="button"
+            onclick="answerPanel.value += '-'"
+            id="minus"
+          >
+            -
+          </button>
+        </div>
+
+        <div class="row mb-1">
+          <button
+            class="col-3 btn btn-dark rounded-3 border border-2"
+            type="button"
+            onclick="answerPanel.value += '1'"
+          >
+            1
+          </button>
+          <button
+            class="col-3 btn btn-dark rounded-3 border border-2"
+            type="button"
+            onclick="answerPanel.value += '2'"
+          >
+            2
+          </button>
+          <button
+            class="col-3 btn btn-dark rounded-3 border border-2"
+            type="button"
+            onclick="answerPanel.value += '3'"
+          >
+            3
+          </button>
+          <button
+            class="col-3 btn btn-dark rounded-3 border border-2"
+            type="button"
+            onclick="answerPanel.value += '+'"
+            id="plus"
+          >
+            +
+          </button>
+        </div>
+
+        <div class="row">
+          <button
+            class="col-3 btn btn-dark rounded-3 border border-2"
+            type="button"
+            onclick="sign()"
+          >
+            +/-
+          </button>
+          <button
+            class="col-3 btn btn-dark rounded-3 border border-2"
+            type="button"
+            onclick="answerPanel.value += '0'"
+          >
+            0
+          </button>
+          <button
+            class="col-3 btn btn-dark rounded-3 border border-2"
+            type="button"
+            onclick="answerPanel.value += '.'"
+          >
+            .
+          </button>
+          <button
+            class="col-3 btn btn-dark rounded-3 border border-2"
+            type="button"
+            onclick="ans()"
+            id="equal"
+          >
+            =
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      let temp = document.getElementById("answerPanel");
+
+      function ans() {
+        let ans = new Function("return " + temp.value);
+
+        temp.value = ans();
+      }
+
+      function back() {
+        temp.value = temp.value.substr(0, temp.value.length - 1);
+      }
+
+      function toggle() {}
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
