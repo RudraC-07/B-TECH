@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Lab19_93 {
+public class Lab20_94 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a size of an array : ");
@@ -17,15 +17,17 @@ public class Lab19_93 {
             System.out.print(arr[i] + " ");
         ;
 
-        int j , curr;
-        for(int i = 1 ; i < n ; i++){
-            j = i - 1;
-            curr = arr[i];
-            while(j >= 0 && arr[j] > curr){
-                arr[j+1] = arr[j];
-                j--;
+        for(int i = 0 ; i < n - 1 ; i++){
+            int minIndex = i;
+            for(int j = i + 1 ; j < n ; j++){
+                if(arr[j] < arr[minIndex]){
+                    minIndex = j;
+                }
             }
-            arr[j+1]=curr;
+
+            int temp = arr[minIndex];
+            arr[minIndex] = arr[i];
+            arr[i] = temp;
         }
 
         System.out.println();
