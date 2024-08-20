@@ -65,6 +65,44 @@ WHERE RNO = 104;
 
 
 -- 1. Create a view that displays information of all students whose SPI is above 8.5
+CREATE VIEW VW_STUDENT_SPI
+AS 
+SELECT * FROM STUDENT_INFO
+WHERE SPI > 8.5
 
 -- 2. Create a view that displays 0 backlog students.
+CREATE VIEW VW_STUDENT_0BKLOG
+AS 
+SELECT * FROM STUDENT_INFO
+WHERE BKLOG = 0
+
 -- 3. Create a view Computerview that displays CE branch data only.
+CREATE VIEW VW_STUDENT_ComputerView
+AS 
+SELECT * FROM STUDENT_INFO
+WHERE BRANCH = 'CE'
+
+
+----------PART-C (VIEWS)----------
+
+
+-- 1. Create a view Result_EC that displays the name and SPI of students with SPI less than 5 of branch EC.
+CREATE VIEW VW_Result_EC
+AS
+SELECT NAME,SPI FROM STUDENT_INFO
+WHERE SPI < 5 AND BRANCH = 'EC'
+
+-- 2. Update the result of student MAHESH to 4.90 in Result_EC view.
+UPDATE VW_Result_EC
+SET SPI = 4.90
+WHERE NAME = 'MAHESH'
+
+-- 3. Create a view Stu_Bklog with RNo, Name and Bklog columns in which name starts with ‘M’ and having
+-- bklogs more than 5.
+CREATE VIEW VW_Stu_Bklog
+AS 
+SELECT RNO,NAME,BKLOG FROM STUDENT_INFO
+WHERE NAME LIKE 'M%' AND BKLOG > 5
+
+-- 4. Drop Computerview form the database.
+DROP VIEW VW_STUDENT_ComputerView
