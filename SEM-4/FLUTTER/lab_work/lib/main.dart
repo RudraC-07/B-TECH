@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:lab_work/Database/crud_db.dart';
+import 'package:lab_work/crud_front_end/crud_home_page.dart';
 import 'package:lab_work/form/form1.dart';
+import 'package:lab_work/lab12/single_child_scroll_view.dart';
+import 'package:lab_work/lab13/Bottom_sheet.dart';
 import 'package:lab_work/lab6/lab6_b_1(b).dart';
 import 'package:lab_work/lab7/lab7_a_1.dart';
 import 'package:lab_work/lab7/lab7_b_5.dart';
@@ -21,6 +25,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -41,7 +46,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: BdCard(),
+      home: CrudDb(),
     );
   }
 }

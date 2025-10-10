@@ -22,7 +22,7 @@ class BdCard extends StatelessWidget {
             height: 30,
           ),
           ElevatedButton(onPressed: ()=>{
-            Navigator.push(context, route)
+            // Navigator.push(context, MaterialPageRoute(builder: (context) => ,);)
           }, child: Text('Generate'))
         ],
       )),
