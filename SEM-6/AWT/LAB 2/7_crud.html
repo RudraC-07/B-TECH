@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD</title>
+  </head>
+
+  <body>
+    <div>
+      <input type="text" id="number" />
+      <button id="add">Enter</button>
+    </div>
+
+    <div>
+      <input type="number" placeholder="enter index to update" id="uindex" />
+      <input type="text" placeholder="enter new value" id="updatevalue" />
+      <button id="btnupdate">update</button>
+    </div>
+
+    <ul
+      id="result"
+      style="
+        border: 2px solid black;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: fit-content;
+        margin: top 10px;
+      "
+    >
+      <p>jhwbf</p>
+      <p>jdhckj</p>
+    </ul>
+  </body>
+
+  <script>
+    let arr = [1,2,3];
+
+    function viewArray() {
+      for (i = 0; i < arr.length; i++) {
+        let li = document.createElement("li");
+        li.innerHTML = `${arr[i]} <button value="${
+          arr.length - 1
+        }">delete</button>`;
+
+        result.append()
+      }
+    }
+
+    viewArray()
+
+    let number = document.getElementById("number");
+    let add = document.getElementById("add");
+
+    let updatevalue = document.getElementById("updatevalue");
+    let uindex = document.getElementById("uindex");
+    let btnupdate = document.getElementById("btnupdate");
+
+    let result = document.getElementById("result");
+
+    add.addEventListener("click", () => {
+      if (number.value != "") {
+        arr.push(number);
+      }
+
+      let div = document.createElement("div");
+
+      div.innerHTML = `<span>${number.value}</span>`;
+
+      result.append();
+    });
+
+    btnpop.addEventListener("click", () => {
+      if (arr.length != 0) {
+        arr.pop();
+      }
+    });
+
+    // btnclear.addEventListener("click",()=>{
+    //   arr.
+    // })
+  </script>
+</html>

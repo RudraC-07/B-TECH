@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change_Div_Style</title>
+  </head>
+  <body>
+    <div id="div" style="border: 2px solid green">Hello World</div>
+    <button id="btn">click</button>
+  </body>
+  <script>
+    let n = 1;
+
+    let btn = document.getElementById("btn");
+    let div = document.getElementById("div");
+
+    btn.addEventListener("click", () => {
+      if (n == 1) {
+        div.style.cssText = "width: 25px; color: red; border : 2px solid black";
+      } else {
+        div.style.cssText =
+          "width: 35px; color: green; border : 2px solid black";
+      }
+      n = -n;
+    });
+  </script>
+</html>

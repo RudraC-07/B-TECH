@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check box</title>
+  </head>
+  <body>
+    <input type="checkbox" class="check" value="1" />1<br />
+    <input type="checkbox" class="check" value="2" />2<br />
+    <input type="checkbox" class="check" value="3" />3<br />
+    <input type="checkbox" class="check" value="4" />4<br />
+    <div id="output"></div>
+  </body>
+  <script>
+    let a = [];
+
+    let cs = document.getElementsByClassName("check");
+
+    for (const c of cs) {
+      console.log(c);
+      c.addEventListener("change", (e) => {
+        if (e.target.checked) {
+          a.push(e.target.value);
+        } else {
+          let index = a.indexOf(e.target.value);
+          a.splice(index, 1);
+        }
+        document.getElementById("output").innerText = a.join(", ");
+      });
+    }
+  </script>
+</html>

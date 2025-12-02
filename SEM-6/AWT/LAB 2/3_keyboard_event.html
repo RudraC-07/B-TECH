@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Key_Board</title>
+</head>
+<body>
+  <input type="text" id="input"/>
+    <script>
+      let input = document.getElementById("input");
+      input.addEventListener("keydown", () => {
+        console.log("Key down");
+      });
+
+      input.addEventListener("keyup", () => {
+        console.log("Key up");
+      });
+
+      input.addEventListener("keypress", () => {
+        console.log("Key press");
+      });
+    </script>
+</body>
+</html>
