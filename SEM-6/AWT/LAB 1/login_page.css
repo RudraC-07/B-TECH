@@ -1,0 +1,14 @@
+#loginbox{
+    border: 2px solid gray;
+    width: fit-content;
+    padding: 5px;
+}
+
+.formele{
+    margin: 2px;
+}
+
+#btndiv{
+    align-self: center;
+    width: fit-content;
+}

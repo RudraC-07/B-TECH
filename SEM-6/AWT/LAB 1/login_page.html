@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login_page.css">
+</head>
+<body>
+    <div id="loginbox">
+        <div id="usernamediv" class="formele"><input type="text" id="username" placeholder="Enter Username"/></div>
+        <div id="passworddiv" class="formele"><input type="text" id="password" placeholder="Enter Password"/></div>
+        <div id="btndiv" class="formele"><button id="loginbtn" style="background-color: aqua;">login</button></div>
+    </div>
+
+    <script>
+        let username = document.getElementById("username")
+        let password = document.getElementById("password")
+        let loginbtn = document.getElementById("loginbtn")
+
+        loginbtn.addEventListener("click", ()=>{
+            if(username.value == "admin" && password.value == "admin@123"){
+                alert("logged in successful")
+            }
+            else{
+                alert("wrong id or pass")
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="number" value="" id="n1"/>
+    <input type="number" value="" id="n2"/>
+
+    <select id="operator">
+        <option value="">Select operator</option>
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="/">/</option>
+        <option value="*">*</option>
+    </select>
+
+    <button id="btn">calculate</button>
+
+    <div id="result" value=""></div>
+
+    <script>
+        let n1 = document.getElementById("n1")
+        let n2 = document.getElementById("n2")
+        let btn = document.getElementById("btn")
+        let op = document.getElementById("operator")
+        let result = document.getElementById("result")
+
+        btn.addEventListener("click",()=>{
+            if(op.value == "+"){
+                result.innerText = Number(n1.value)+Number(n2.value)
+            }
+            if(op.value == "-"){
+                result.innerText = Number(n1.value)-Number(n2.value)
+            }
+            if(op.value == "/"){
+                result.innerText = Number(n1.value)/Number(n2.value)
+            }
+            if(op.value == "*"){
+                result.innerText = Number(n1.value)*Number(n2.value)
+            }
+        })
+    </script>
+</body>
+</html>
