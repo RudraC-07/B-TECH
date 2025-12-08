@@ -1,0 +1,8 @@
+
+
+void main(){
+  int i;
+  const a = 20;
+}
+jhfjjhbj
+hhjfjh

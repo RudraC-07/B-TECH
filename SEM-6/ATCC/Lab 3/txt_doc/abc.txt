@@ -1,0 +1,8 @@
+// this is one line comment
+/* this is multi-line comment */
+void main(){
+  int i;
+  const a = 20;
+}
+jhfjjhbj
+hhjfjh
