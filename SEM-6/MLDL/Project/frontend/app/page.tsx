@@ -1,9 +1,9 @@
-import PredictForm from "@/components/predict-form"
+import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex items-center justify-center p-6">
-      <PredictForm />
-    </main>
-  )
+    <div className="min-h-screen bg-muted/30">
+      <Hero />
+    </div>
+  );
 }
